@@ -35,11 +35,13 @@ vector<vector<int>> fourSum(vector<int>& nums, int target) {
                         res.push_back(quad);         //  11222333444
                         
                      //Removing the duplicates of 3rd number
-                      while(left<right && nums[left] == quad[2] ) ++left;
+                      while(left<right && nums[left] == nums[left+1] ) left++;
                         
                      //Removing the duplicates of 4th number
                        while(left<right && nums[right] ==  quad[3] ) --right;
                         
+                        
+                        left++;
                     }       
               
                 }
